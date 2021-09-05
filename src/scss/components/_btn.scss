@@ -1,0 +1,160 @@
+@import "../vars";
+button{
+    background-color: inherit;
+}
+
+.cart-circle-btn{
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #FE5F1E;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    @include transition01s;
+    &--delete{
+        border-color: #D0D0D0 ;
+        &:hover{
+            background-color:#D0D0D0 !important;
+            path{
+                fill:#fff;
+            }
+        }
+    }
+    &:hover{
+        background-color: $btnColor;
+        path{
+            fill:#fff;
+        }
+    }
+}
+
+.button{
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    border: 1px solid $btnColor;
+    padding: 11px 20px 11px 20px;
+    border-radius: 30px;
+    position: relative;
+    @include transition01s;
+
+    &-wrapper{
+        display: flex;
+        align-items: center;
+
+    }
+    &-delimiter{
+        width: 1px;
+        height: 25px;
+        background-color: rgba(255, 255, 255, 0.25);
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+    &--back{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #CACACA;  
+        border-color: #CACACA;
+        width: 211px;
+        height: 55px;
+        &-gray{
+            background-color: #282828;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 0.015em;
+            color: #FFFFFF;
+        }
+        p{
+            margin-left: 15px;
+        }
+        &:hover{
+            background-color: #CACACA;
+            color: #FFF;
+            path{
+                fill:#FFF;
+            }
+        }
+    }
+    &--cart{
+        svg{
+          margin-right: 8px;  
+        }
+        background-color: $btnColor;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color:#FFF;  
+        &:hover{
+            background-color: #d8531e;
+        }
+    }
+    &--pay{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 211px;
+        height: 55px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    &--outline{
+        color: #000;
+        &:hover{
+            background-color: $btnColor;
+            color: #fff;
+            path{
+                fill:#fff;
+            }
+        }
+    }
+    &--added{
+        padding-right: 37px;
+        &:hover{
+            i{
+                background-color: #fff;
+                color: $btnColor;
+            }             
+        }
+        padding-right: 37px;
+        color: $btnColor;
+        i{
+            position: absolute;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 21px;
+            margin-left: 7px;
+            bottom: 9px;
+            padding: 1px;
+            background-color: $btnColor;
+            color:#fff;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+        }
+    }
+    
+}
