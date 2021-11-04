@@ -38,6 +38,7 @@ button{
 }
 
 .button{
+    
     cursor: pointer;
     font-style: normal;
     font-weight: bold;
@@ -48,7 +49,34 @@ button{
     border-radius: 30px;
     position: relative;
     @include transition01s;
-
+    span{
+        margin-left: 3px;
+    }
+    &-cart-circle{
+        border-radius: 50%;
+        border: 1px solid #FE5F1E;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &--delete{
+            border-color: #D0D0D0 ;
+            &:hover{
+                background-color:#D0D0D0 !important;
+                path{
+                    fill:#fff;
+                }
+            }
+        }
+    }
     &-wrapper{
         display: flex;
         align-items: center;
@@ -131,29 +159,29 @@ button{
         }
     }
     &--added{
-        padding-right: 37px;
         &:hover{
             i{
                 background-color: #fff;
                 color: $btnColor;
             }             
         }
-        padding-right: 37px;
+        display: flex;
+        align-items: center;
+
         color: $btnColor;
         i{
-            position: absolute;
             font-style: normal;
             font-weight: bold;
             font-size: 13px;
-            line-height: 21px;
+            line-height: 17px;
             margin-left: 7px;
-            bottom: 9px;
+            
             padding: 1px;
             background-color: $btnColor;
             color:#fff;
             border-radius: 50%;
-            width: 22px;
-            height: 22px;
+            width: 18px;
+            height: 18px;
         }
     }
     
