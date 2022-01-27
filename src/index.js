@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { Login } from './pages';
+
+import { Route } from 'react-router-dom';
 
 
 import './style.scss';
@@ -13,7 +16,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
+        {/* <Route path="main/login" component={Login} exact /> */}
         <App />
+        {/* <Route path='/' component={App} exact /> */}
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

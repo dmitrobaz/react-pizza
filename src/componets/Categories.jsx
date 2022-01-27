@@ -3,7 +3,7 @@ import React from 'react';
 const Categories = React.memo(function Categoris({ activeCategory, items, onClickCategory }) {
 
     return (
-        <div className="categories">
+        <div className="categories categories--sidebar">
             <ul>
 
                 <li className={activeCategory === null ? 'active' : ''}

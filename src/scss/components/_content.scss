@@ -38,6 +38,12 @@
     }
     .sort{
         position: relative;
+        padding-left: 10px;
+        &.side-bar{
+            span{
+                color:#fff
+            }
+        }
         span{
             color:$btnColor;
             border-bottom: 1px dotted $btnColor;
@@ -45,14 +51,15 @@
         }
         &__list{
             position: absolute;
-            right: 0;
-            top: 25px;
+            right: 31px;
+            top: 47px;
             width: 132px;
             height: 136px;
             background-color: #fff;
             color:#000;
             border-radius:10px ;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+            
             ul{
                 margin-top: 13px;
                 li{
@@ -77,16 +84,13 @@
     .content__items{
         margin-top: 32px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         flex-wrap: wrap;
         min-width: 100%;
         .pizza-block{
             width: 280px;
             text-align: center;
             margin-right: 1.7%;
-            img{
-                
-            }
             &__title{
                 font-family: Proxima Nova;
                 font-style: normal;

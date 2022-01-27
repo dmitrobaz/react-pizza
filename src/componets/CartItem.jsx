@@ -48,7 +48,7 @@ const CartItem = ({ namePizza, imageUrl, type, size,
                 </Button>
 
             </div>
-            <h3>{totalPrice} ₽</h3>
+            <h3 className="pizza-cart__item-price">{totalPrice} ₽</h3>
             <Button className={"button-cart-circle button-cart-circle--delete"} onClick={handleRemovePizza}>
                 <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

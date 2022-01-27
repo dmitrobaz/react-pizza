@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Categories, PizzaBlock, Sort, Loaded } from '../componets';
+import { Categories, PizzaBlock, Sort, Loaded, Button, BurgerButton, Cart } from '../componets';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategory, setSortBy } from '../redux/actions/filters';
 import { fetchPizzas } from '../redux/actions/pizzas';
@@ -17,10 +17,12 @@ const sortItem = [{ name: 'популярности', type: 'popular' }, { name:
 
 
 const Main = () => {
+
     const items = useSelector(({ pizzas }) => pizzas.items)
     const isLoaded = useSelector(({ pizzas }) => pizzas.isLoaded)
     const { category, sortBy } = useSelector(({ filters }) => filters)
     const addedCartItems = useSelector(({ cart }) => cart.items)
+    const [sideBar, setSideBar] = React.useState(false)
 
     React.useEffect(() => {
         dispatch(fetchPizzas(category, sortBy))
@@ -38,11 +40,21 @@ const Main = () => {
     const handleAddPizzaCart = (item) => {
         dispatch(addPizzaToCart(item))
     }
-
+    const handleClickState = () => {
+        console.log(sideBar)
+        setSideBar(!sideBar)
+    }
 
     return (
         <main className="content">
-            <div className="container">
+            <BurgerButton onClick={handleClickState} />
+            <div id="mySidenav" className={sideBar ? "sidenav active" : "sidenav"}>
+                <BurgerButton onClick={handleClickState} className='is-open' />
+                <Categories activeCategory={category} onClickCategory={onSelectItem} items={categories} />
+                <Sort activeSortType={sortBy} items={sortItem} onClickSortType={onSelectSort} className='side-bar' />
+
+            </div>
+            <div className="container sortcat">
                 <Categories activeCategory={category} onClickCategory={onSelectItem} items={categories} />
                 <Sort activeSortType={sortBy} items={sortItem} onClickSortType={onSelectSort} />
             </div>

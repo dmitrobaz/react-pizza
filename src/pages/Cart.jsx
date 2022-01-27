@@ -85,7 +85,7 @@ const Cart = () => {
                         <div className="total-amount">Всего пицц: <strong> {totalCount} шт.</strong></div>
                         <div className="total-price">Сумма заказа:<strong> {totalPrice} ₽</strong></div>
                     </div>
-                    <div className="container-cart pizza-cart__pay">
+                    <div className="container-cart pizza-cart__pay last-block">
                         <Link to='/'>
                             <div href="#" className="button button--back">
                                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" >
